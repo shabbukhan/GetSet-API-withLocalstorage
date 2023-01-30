@@ -1,0 +1,48 @@
+.containerSingleCol {
+  width: 800px;
+  /* background: #d6d6d6; */
+  margin-inline: auto;
+}
+
+/* .containerSingleCol .col-1{
+    background: #00bcb3;
+} */
+
+.listType1 {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  margin-block: 5rem;
+}
+.listType1 li {
+  background: #00bcb3;
+  text-align: center;
+}
+
+.listType2 {
+  display: flex;
+  grid-gap: 5px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 5rem;
+}
+/* .listType2 li:nth-child(odd) {
+  background: #ded;
+} */
+
+.listType2 li input {
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+  .containerSingleCol {
+    width: calc(100% - 40px);
+  }
+}
+@media screen and (max-width: 480px) {
+  .listType1 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 370px));
+  }
+}

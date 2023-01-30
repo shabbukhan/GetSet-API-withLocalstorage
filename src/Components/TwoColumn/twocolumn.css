@@ -1,0 +1,28 @@
+.containerTowCol {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(1, 2fr) 50%;
+  /* grid-template-columns: repeat(1, 2fr) 80%; */
+  margin-block-start: 3rem;
+  background: #d6d6d6;
+  margin-inline: auto;
+}
+
+aside {
+  background: #00bcb3;
+}
+.containerTowCol .col-1 {
+  background: #00bcb3;
+}
+
+@media screen and (max-width: 1023px) {
+  .containerTowCol {
+    width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerTowCol {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 370px));
+  }
+}
